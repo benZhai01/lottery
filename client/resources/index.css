@@ -1,0 +1,102 @@
+body {
+    background: #533a6f;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-family: Consolas, Monaco, monospace;
+    overflow: hidden;
+}
+
+.logo {
+    height: 60px;
+    width: 100%;
+    margin-top: 50px;
+    background-image: url("logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: none;
+}
+
+.number-scroll{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.number-scroll ul {
+    width: 150px;
+    height: calc(36 * 150px);
+    list-style: none;
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes rowup {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -95%, 0);
+    }
+}
+
+.number-scroll li {
+    height: 150px;
+    font-size: 96px;
+    text-align: center;
+    transform: translateY(20px);
+}
+
+
+.hide{
+    display: none;
+}
+
+.panel{
+    height: 500px;
+    width: 100vw;
+    position: relative;
+}
+
+.output-panel{
+    position: absolute;
+    transition: left linear 0.5s;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 100px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.number_card{
+    width: 160px;
+    height: 80px;
+    border: 4px solid #b68ae9;
+    color: white;
+    font-size: 50px;
+    border-radius: 80px / 40px;
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.title{
+    font-size: 50px;
+    color: antiquewhite;
+}
